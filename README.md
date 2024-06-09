@@ -16,25 +16,27 @@ therefore, if we standerize the mean that was calculted in the experiment we can
 meant for: comparing our experiment to the population, when the mean and the variance of the population is known.
 assumptions:
 
-2. One sample t-test: test which is simillar to the Z-test, however it is used when the variance in the population is not known. therefore, we will evaluate the variance in the population using the variance recived from the samples. since it adds uncertianty, the sampling distribution of the mean will be a t-distribution with n-1 degrees of freedom.
+2. One sample t-test:
+* background: test which is simillar to the Z-test, however it is used when the variance in the population is not known. therefore, we will evaluate the variance in the population using the variance recived from the samples. since it adds uncertianty, the sampling distribution of the mean will be a t-distribution with n-1 degrees of freedom.
 meant for: comparing our experiment to the population, when the mean is known and the variance of the population is  not known.
 assumptions:
 
-3. Two-sample paired sample t-test: test used for comparing 2 samples groups, in which we can match between each sample in group 1 to sample in group 2. in this case, we can calculate the differences between each pair of samples, and preform a one-sample t-test on the difference, which will be zero most of the times (since the null hypothesis is that there is no effect). we will also use the variance of the differences.
+4. Two-sample paired sample t-test:
+background: test used for comparing 2 samples groups, in which we can match between each sample in group 1 to sample in group 2. in this case, we can calculate the differences between each pair of samples, and preform a one-sample t-test on the difference, which will be zero most of the times (since the null hypothesis is that there is no effect). we will also use the variance of the differences.
 meant for: comparing between the means of 2 groups, when it is possible to match between each sample in the first group to a sample in the second group, for example- comparing the effect of a drug before and after consumption.
 assumptions:
 
-4. Two-sample independent t-test: test used for comparing the means of 2 different samples groups, that cannot be matched. note! In most cases it will be preferable to preform a paired t-test over independent t-test, since this test will have more power (the probability to reject H0 given that H1 is true). in this test we will calculate the difference between the means and will use the weighted average of their variances.
+6. Two-sample independent t-test: test used for comparing the means of 2 different samples groups, that cannot be matched. note! In most cases it will be preferable to preform a paired t-test over independent t-test, since this test will have more power (the probability to reject H0 given that H1 is true). in this test we will calculate the difference between the means and will use the weighted average of their variances.
 meant for: comparing the means of 2 different groups.
 assumptions:
 
-5. Pearson correlation: measures the strength and direction of the linear relationship between two variables
+7. Pearson correlation: measures the strength and direction of the linear relationship between two variables
 test to measure the covariance of the 2 contious variables relative to their variances, in order to see if those variables change together in some manner (positive or negative). r is calculated by: 
 if rho is not zero then:
 meant for: test to see if 2 variables change together significatelly.
 assumptions:
 
-6. Linear regression: Builds on correlation to predict values.
+8. Linear regression: Builds on correlation to predict values.
 Uses known relationships to predict the value of one variable based on another.
 assumptions:
 
