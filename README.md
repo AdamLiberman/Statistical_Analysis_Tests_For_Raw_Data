@@ -30,61 +30,73 @@ This project was originally implemented as part of the [Python programming cours
 
 * Background: According to the CLT, the sampling distribution of the mean of sample group of n size, will be distributed normally with a mean that equals to the true mean of the population with a std of 𝜎/sqrt(𝑛) (𝜎 is the std of the population).
 Under the null hypothesis, we will assume that the mean recived in our experiment is part of the sampling distribution of the population. 
-Therefore, if we standardize the mean that was recieved we will get a Z-score, which can be used to calculate the probability to recieve this mean or a more extreme value. This is the p-value, which we will compare to α  that easdeterminted in the beggining of the experiment.If the p-value if smaller than the alpha we could reject the null hypothesis and say that mean recieved is signicantlly different from the mean of the population. 
+Therefore, if we standardize the mean that was recieved we will get a Z-score, which can be used to calculate the probability to recieve this mean or a more extreme value. This is the p-value, which we will compare to α  that easdeterminted in the beggining of the experiment.If the p-value if smaller than the alpha we could reject the null hypothesis and say that mean recieved is signicantly different from the mean of the population. 
 
 * Use when: Comparing our experiment's mean to the population's one, when the mean and the variance of the population is known.
 
 * Assumptions:
 1. Population's mean (μ) and std (σ) are known.
-2. The population from which the sample is drawn follow a normal distribution. Alterntively, the sample size is large enough for the sampling distribution of the sample mean to be approximately normal (n ≥ ~30)
+2. The population from which the sample is drawn follow a normal distribution. Alterntively, the sample size is large enough for the sampling distribution of the sample mean to be approximately normal (n ≥ ~30).
 
 ### 2. One sample t-test:
 
 * Background: Test which is simillar to the Z-test, however it is used when the variance in the population is not known. Instead, we will evaluate the variance in the population using the variance recieved from the results. Since it adds uncertainty, the sampling distribution of the mean will follow a t-distribution with n-1 degrees of freedom.
-  𝑡 =ത𝑋𝑛− 𝜇𝑆𝑛~ 𝑡𝑛−1
 
 * Use when: Comparing our experiment's mean to the population's one, when it is known.
 
 * Assumptions: 
 1. Population's mean (μ) is known.
-2. The population from which the sample is drawn follow a normal distribution. Alterntively, the sample size is large enough for the sampling distribution of the sample mean to be approximately normal (n ≥ ~30)
+2. The population from which the sample is drawn follow a normal distribution. Alterntively, the sample size is large enough for the sampling distribution of the sample mean to be approximately normal (n ≥ ~30).
+3. The observations in the sample must be independent of each other and should not be influenced by or related to other observations.
 
 ### 3. Two-sample paired sample t-test:
 
-* Background: Test used for comparing 2 samples groups, in which we can match between each sample in group 1 to sample in group 2. In this case, we can calculate the differences between each pair of samples, and preform a one-sample t-test on the differences' mean, which will be zero most of the times (since the null hypothesis is that there is no effect), using also the variance of the differences.
+* Background: Test used for comparing 2 samples groups, in which we can match between each sample in group 1 to sample in group 2. In this case, we can calculate the differences between each pair of samples, and preform a one-sample t-test on the differences' mean, which will be zero most of the times (since the null hypothesis is that there is no effect), using also the variance of the differences. Note that n in this case will be the numbers of pairs.
 
 * Use when: comparing between the means of 2 groups, when it is possible to match between each sample in the first group to a sample in the second group, for example - comparing the effect of a drug before and after consumption.
 
 * Assumptions:
+1. The population from which the sample is drawn follow a normal distribution. Alterntively, the sample size is large enough for the sampling distribution of the sample mean to be approximately normal (n ≥ ~30).
+2. The observations in the sample must be independent of each other and should not be influenced by or related to other observations.
 
 ### 4. Two-sample independent t-test:
 
-* Background: test used for comparing the means of 2 different samples groups, that cannot be matched. note! In most cases it will be preferable to preform a paired t-test over independent t-test, since this test will have more power (the probability to reject H0 given that H1 is true). in this test we will calculate the difference between the means and will use the weighted average of their variances.
+* Background: Test used for comparing the means of 2 different sample groups, that cannot be matched. note! In most cases it will be preferable to preform a paired t-test over independent t-test, since this test will have more power (the probability to reject H0 given that H1 is true). In this test we will calculate the difference between the means and will use the weighted average of their variances.
 
-* Use when: comparing the means of 2 different groups.
+* Use when: Comparing the means of 2 different unmatching groups.
 
 * Assumptions:
+1. The population from which the sample is drawn follow a normal distribution. Alterntively, the sample size is large enough for the sampling distribution of the sample mean to be approximately normal (n ≥ ~30).
+2. The observations in each group must be independent of each other and should not be influenced by or related to other observations.
+3. The variances in the two groups should be equal.
 
 ### 5. Pearson correlation:
 
-* Backgorund: measures the strength and direction of the linear relationship between two variables
-test to measure the covariance of the 2 contious variables relative to their variances, in order to see if those variables change together in some manner (positive or negative). r is calculated by: 
-if rho is not zero then:
+* Backgorund: Measures the strength and direction of the linear relationship between two variables relatively to their variances. the test checks if those variables change together in a manner that is significant statistically. r is calculated by: 
 
-* Use when: test to see if 2 variables change together significatelly.
+* Use when: Testing if 2 variables change together significantly.
 
-* assumptions:
-
-### 6. Linear regression:
-* Background: Builds on correlation to predict values.
-Uses known relationships to predict the value of one variable based on another.
-
-* meant for:
-  
-* assumptions:
+* Assumptions: 
+1. Under H0, the covariance of 2 variables is zero.
+2. Both variables should be continuous.
+3. Each pair of data points should be independent of each other
+4. Both variables should be approximately normally distributed and their joint distribution should be
+bivariate normal.
+5. The relationship between the two variables should be linear.
+6. Homoscedasticity - The variability of one variable should be similar at all values to the variability of the other
+variable.
+7. No Outliers, since it can disproportionately influence the correlation coefficient, leading to misleading
+results.
 
 ## The code
 
-the program takes as an input a file that summerizes the results of the experiment and the test that the user would like to preform, with an given alpha and two vs. one tail test, and will print as an output the p-value of the test, and weather it is able to reject the null hypothesis. 
-for tests 1-2 the program will expect to recieve one column of the samples results, and the mean of the population. in test 1 it will also require the variance in population.
-for the remaining tests the program will expect 2 columns of results.
+1. The program takes as an input a excel/csv file that contains the results of the experiment. For tests 1-2 the program will expect to recieve one column of results and For the remaining tests the program will expect 2 columns of results. The name of the variable should be specified at the top of each column.
+2. The progtam will ask which the test the user would like to preform.
+3. For tests 1-2, the program will ask for the mean of the population. In test 1 it will also require the variance in population.
+4. The progtam will ask for a value for α. For tests 1-4 it will also ask to choose two vs. one tail test.
+5. The program will print as an output the p-value of the test, and wether it is able to reject the null hypothesis. For test 5 it will also specify the value of r.
+
+,,,
+Python statistical analysis.py experimental data.xlsx
+,,,
+
