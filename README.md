@@ -39,6 +39,7 @@ Therefore, if we standardize the mean that was recieved we will get a Z-score, w
 $$\frac{x-𝜇}{\frac{𝜎}{\sqrt{n}}}~Z$$
 
 ![](standard-normal-distribution-example.png)
+
 * Use when: Comparing our experiment's mean to the population's one, when the mean and the variance of the population is known.
 
 * Assumptions:
@@ -48,7 +49,10 @@ $$\frac{x-𝜇}{\frac{𝜎}{\sqrt{n}}}~Z$$
 ### 2. One sample t-test:
 
 * Background: Test which is simillar to the Z-test, however it is used when the variance in the population is not known. Instead, we will evaluate the variance in the population using the variance recieved from the results. Since it adds uncertainty, the sampling distribution of the mean will follow a t-distribution with n-1 degrees of freedom.
+$$\frac{x-𝜇}{\frac{S}{\sqrt{n}}}~t_n-1$$
+  
 ![](t_distribution_comparisons.png)
+
 * Use when: Comparing our experiment's mean to the population's one, when it is known.
 
 * Assumptions: 
@@ -59,6 +63,7 @@ $$\frac{x-𝜇}{\frac{𝜎}{\sqrt{n}}}~Z$$
 ### 3. Two-sample paired sample t-test:
 
 * Background: Test used for comparing 2 samples groups, in which we can match between each sample in group 1 to sample in group 2. In this case, we can calculate the differences between each pair of samples, and preform a one-sample t-test on the differences' mean, which will be zero most of the times (since the null hypothesis is that there is no effect), using also the variance of the differences. Note that n in this case will be the numbers of pairs.
+$$\frac{d}{\frac{S_d}{\sqrt{n}}}~t_n-1$$
 
 * Use when: comparing between the means of 2 groups, when it is possible to match between each sample in the first group to a sample in the second group, for example - comparing the effect of a drug before and after consumption.
 
@@ -69,6 +74,7 @@ $$\frac{x-𝜇}{\frac{𝜎}{\sqrt{n}}}~Z$$
 ### 4. Two-sample independent t-test:
 
 * Background: Test used for comparing the means of 2 different sample groups, that cannot be matched. note! In most cases it will be preferable to preform a paired t-test over independent t-test, since this test will have more power (the probability to reject H0 given that H1 is true). In this test we will calculate the difference between the means and will use the weighted average of their variances.
+$$\frac{x_1-x_2}{\sqrt{\frac{S_1^2*(n_1-1)+S_2^2*(n_2-1}{n_1+n_2-2}}}*\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}~t_n_1+n_2-2$$
 
 * Use when: Comparing the means of 2 different unmatching groups.
 
