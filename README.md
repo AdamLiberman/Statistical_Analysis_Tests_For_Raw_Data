@@ -2,7 +2,7 @@
 
 ## Background
 
-Every academical research has 2 competeing hypothesis:
+Every academical research has 2 competing hypothesis:
 1. null hypothesis (H0) - the effect being studies does not exist and any experimentally observed effect is due to chance alone.  
 2. Alternative hypothesis (H1) - the effect being studied exhibit a true phenomenon.
    
