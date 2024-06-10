@@ -24,15 +24,15 @@ Note that the program still requires basic statistical knowledge, in order to to
 
 This project was originally implemented as part of the [Python programming course](https://github.com/szabgab/wis-python-course-2024-04) at the [Weizmann Institute of Science](https://www.weizmann.ac.il/) taught by [Gabor Szabo](https://szabgab.com/).
 
-## types of tests
+## Test types
 
 ### 1. Z-test:
 
-* background: according to the CLT, the sampling distribution of the mean of samples in the size of n,  will be distributed normally with a mean equal to the true mean of the population and std of sigma/sqrt(n). 
-under the null hypothesis (H0), we will assume that the mean recived in our experiment is part of the sampling distribution of the population. 
-therefore, if we standerize the mean that was calculted in the experiment we can get a Z-score and to calculate the probability to recieve this mean or a more extreme value. this is the p-value, which we will compare to an alpha determinted in the beggining of the experiment, and if the p-value if smaller than the alpha we could reject the null hypothesis and say that mean recieved is signicantlly different from the mean of the population. 
+* Background: According to the CLT, the sampling distribution of the mean of sample group of n size, will be distributed normally with a mean that equals to the true mean of the population with a std of 𝜎/sqrt(𝑛) (𝜎 is the std of the population).
+Under the null hypothesis, we will assume that the mean recived in our experiment is part of the sampling distribution of the population. 
+Therefore, if we standardize the mean that was recieved we will get a Z-score, which can be used to calculate the probability to recieve this mean or a more extreme value. This is the p-value, which we will compare to α  that easdeterminted in the beggining of the experiment.If the p-value if smaller than the alpha we could reject the null hypothesis and say that mean recieved is signicantlly different from the mean of the population. 
 
-* meant for: comparing our experiment to the population, when the mean and the variance of the population is known.
+* Meant for: Comparing our experiment's mean to the population, when the mean and the variance of the population is known.
 
 * assumptions:
 
