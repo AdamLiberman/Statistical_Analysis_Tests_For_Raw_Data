@@ -22,7 +22,7 @@ Another goal is to add more tests as time passes in order to enrich the program 
 
 Note that the program still requires basic statistical knowledge, in order to to match the right statistical test to the experiment.
 
-This project was originally implemented as part of the [Python programming course](https://github.com/szabgab/wis-python-course-2024-04) at the [Weizmann Institute of Science](https://www.weizmann.ac.il/) taught by [Gabor Szabo](https://szabgab.com/)"
+This project was originally implemented as part of the [Python programming course](https://github.com/szabgab/wis-python-course-2024-04) at the [Weizmann Institute of Science](https://www.weizmann.ac.il/) taught by [Gabor Szabo](https://szabgab.com/).
 
 ## types of tests
 
