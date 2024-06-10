@@ -102,15 +102,15 @@ Use the following command:
 ```
 pip install -r requirements.txt
 ```
-## Run the program:
-
-In order to run the program, you should provide the script's name and the results' file, for example:
-```
-python statistical_analysis.py experimental_data.xlsx
-```
 ## Test the program:
 
 Use the following command:
 ```
 pytest
+```
+## Run the program:
+
+In order to run the program, you should provide the script's name and the results' file, for example:
+```
+python statistical_analysis.py experimental_data.xlsx
 ```
