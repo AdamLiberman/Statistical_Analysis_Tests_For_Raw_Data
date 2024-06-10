@@ -47,7 +47,7 @@ $$\frac{x-𝜇}{\frac{𝜎}{\sqrt{n}}}~Z$$
 ### 2. One sample t-test:
 
 * Background: Test which is simillar to the Z-test, however it is used when the variance in the population is not known. Instead, we will evaluate the variance in the population using the variance recieved from the results. Since it adds uncertainty, the sampling distribution of the mean will follow a t-distribution with n-1 degrees of freedom.
-[]|(t_distribution_comparisons.png)
+![](t_distribution_comparisons.png)
 * Use when: Comparing our experiment's mean to the population's one, when it is known.
 
 * Assumptions: 
