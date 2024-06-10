@@ -1,11 +1,24 @@
 # statistical_analysis_program
 
-## background
+## Background
 
-In any academical research there is a need in proving that the research findings are statistical significant and show a true phenomenon. 
-In order to prove it, it is common nowdays to calculate p-values from the test data compared to the null hypothesis, representing the probability to recieve a value such as the one recieved or more extreme, under the assumption the null hypothesis is true.
+Every academical research has 2 competeing hypothesis:
+1. null hypothesis (H0) - the effect being studies does not exist and any experimentally observed effect is due to chance alone.  
+2. Alternative hypothesis (H1) - the effect being studied exhibit a true phenomenon.
+   
+Therefore, there is a need in tools to prove that the research findings have statistical significance, meaning the probability to get a certain result or more extreme one (a.k.a the p-value) would be very low, under the assumption the null hypothesis is true.
+
+In order to prove it, the most common method nowdays is to choose an α value, the study's significance level (defined as the probability to reject H0, given H0 is true), which usually chosen to be 5% or lower, depends on the study. The researcher also need to choose the type of tail-test:
+1. One-tail test: Specifying direction of the difference between the means,so that H1 states if the popluation's mean is smaller or bigger than the hypothesized mean. Therefore, the rejection region will be placed entirely in one tail of the sampling distribution, either the upper tail (right-sided test) or the lower tail (left-sided test).
+2. Two-tail test: Not specifying the direction of difference, so that H1 only states that the population's mean is different than the hypothesized mean. Therefore, the rejection region is divided equally between both tails of the sampling distribution.
+
+Afterwards, the p-value will be calculated from the data using different tests, intended for different sets of data. The p-value will be compared to α, and the result will be declared as statistically significant, by the standards of the study, if p-value ≤ α.
+
+## Goal of the project
 
 the point of the project is to create a tool that simplifies the statistical analysis after the experiment, insted of writing a program that will anlyse the results for each experiment. the goal is to add more kinds of tests as time passes in order for the program to be generic as possible?
+
+note! there is still a need in statistical knowledge
 
 ## types of tests
 
