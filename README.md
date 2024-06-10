@@ -36,7 +36,7 @@ This project was originally implemented as part of the [Python programming cours
 * Background: According to the CLT, the sampling distribution of the mean of sample group of n size, will be distributed normally with a mean that equals to the true mean of the population with a std of 𝜎/sqrt(𝑛) (𝜎 is the std of the population).
 Under the null hypothesis, we will assume that the mean recived in our experiment is part of the sampling distribution of the population. 
 Therefore, if we standardize the mean that was recieved we will get a Z-score, which can be used to calculate the probability to recieve this mean or a more extreme value. This is the p-value, which we will compare to α  that easdeterminted in the beggining of the experiment.If the p-value if smaller than the alpha we could reject the null hypothesis and say that mean recieved is signicantly different from the mean of the population.
-$$((x-𝜇)/𝜎/sqrt(n))~Z$$
+$$((ֿx-𝜇)\frac𝜎\fracsqrt{n})~Z$$
 
 * Use when: Comparing our experiment's mean to the population's one, when the mean and the variance of the population is known.
 
