@@ -16,13 +16,18 @@ Afterwards, the p-value will be calculated from the data using different tests, 
 
 ## Goal of the project
 
-the point of the project is to create a tool that simplifies the statistical analysis after the experiment, insted of writing a program that will anlyse the results for each experiment. the goal is to add more kinds of tests as time passes in order for the program to be generic as possible?
+The project is intended to provide a tool that simplifies the statistical analysis stage that comes after an experiment. Insted of writing a program that will analyse the results for each experiment specifically, this program is meant to provide a general tool to different experiments. 
 
-note! there is still a need in statistical knowledge
+Another goal is to add more tests as time passes in order to enrich the program with as many tools as possible.
+
+Note that the program still requires basic statistical knowledge, in order to to match the right statistical test to the experiment.
+
+This project was originally implemented as part of the [Python programming course](https://github.com/szabgab/wis-python-course-2024-04) at the [Weizmann Institute of Science](https://www.weizmann.ac.il/) taught by [Gabor Szabo](https://szabgab.com/)"
 
 ## types of tests
 
 ### 1. Z-test:
+
 * background: according to the CLT, the sampling distribution of the mean of samples in the size of n,  will be distributed normally with a mean equal to the true mean of the population and std of sigma/sqrt(n). 
 under the null hypothesis (H0), we will assume that the mean recived in our experiment is part of the sampling distribution of the population. 
 therefore, if we standerize the mean that was calculted in the experiment we can get a Z-score and to calculate the probability to recieve this mean or a more extreme value. this is the p-value, which we will compare to an alpha determinted in the beggining of the experiment, and if the p-value if smaller than the alpha we could reject the null hypothesis and say that mean recieved is signicantlly different from the mean of the population. 
@@ -32,6 +37,7 @@ therefore, if we standerize the mean that was calculted in the experiment we can
 * assumptions:
 
 ### 2. One sample t-test:
+
 * background: test which is simillar to the Z-test, however it is used when the variance in the population is not known. therefore, we will evaluate the variance in the population using the variance recived from the samples. since it adds uncertianty, the sampling distribution of the mean will be a t-distribution with n-1 degrees of freedom.
 
 * meant for: comparing our experiment to the population, when the mean is known and the variance of the population is  not known.
