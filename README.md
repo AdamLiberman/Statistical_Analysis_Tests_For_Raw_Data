@@ -96,7 +96,21 @@ results.
 4. The progtam will ask for a value for α. For tests 1-4 it will also ask to choose two vs. one tail test.
 5. The program will print as an output the p-value of the test, and wether it is able to reject the null hypothesis. For test 5 it will also specify the value of r.
 
-```
-Python statistical analysis.py experimental data.xlsx
-```
+## Install dependencies:
 
+Use the following command:
+```
+pip install -r requirements.txt
+```
+## Run the program:
+
+In order to run the program, you should provide the script's name and the results' file, for example:
+```
+python statistical_analysis.py experimental_data.xlsx
+```
+## Test the program:
+
+Use the following command:
+```
+pytest
+```
