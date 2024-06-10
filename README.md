@@ -3,7 +3,7 @@
 ## Background
 
 Every academical research has 2 competing hypothesis:
-1. null hypothesis (H0) - the effect being studies does not exist and any experimentally observed effect is due to chance alone.  
+1. Null hypothesis (H0) - the effect being studies does not exist and any experimentally observed effect is due to chance alone.  
 2. Alternative hypothesis (H1) - the effect being studied exhibit a true phenomenon.
    
 Therefore, there is a need in tools to prove that the research findings have statistical significance, meaning the probability to get a certain result or more extreme one (a.k.a the p-value) would be very low, under the assumption the null hypothesis is true.
