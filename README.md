@@ -10,7 +10,12 @@ Therefore, there is a need in tools to prove that the research findings have sta
 
 In order to prove it, the most common method nowdays is to choose an α value, the study's significance level (defined as the probability to reject H0, given H0 is true), which usually chosen to be 5% or lower, depends on the study. The researcher also need to choose the type of tail-test:
 1. One-tail test: Specifying direction of the difference between the means,so that H1 states if the popluation's mean is smaller or bigger than the hypothesized mean. Therefore, the rejection region will be placed entirely in one tail of the sampling distribution, either the upper tail (right-sided test) or the lower tail (left-sided test).
-2. Two-tail test: Not specifying the direction of difference, so that H1 only states that the population's mean is different than the hypothesized mean. Therefore, the rejection region is divided equally between both tails of the sampling distribution.
+   
+![](Generalized_figure_of_one_sided_test.png)
+
+3. Two-tail test: Not specifying the direction of difference, so that H1 only states that the population's mean is different than the hypothesized mean. Therefore, the rejection region is divided equally between both tails of the sampling distribution.
+   
+![](Generalized_figure_of_two_sided_test.png)
 
 Afterwards, the p-value will be calculated from the data using different tests, intended for different sets of data. The p-value will be compared to α, and the result will be declared as statistically significant, by the standards of the study, if p-value ≤ α.
 
@@ -30,7 +35,8 @@ This project was originally implemented as part of the [Python programming cours
 
 * Background: According to the CLT, the sampling distribution of the mean of sample group of n size, will be distributed normally with a mean that equals to the true mean of the population with a std of 𝜎/sqrt(𝑛) (𝜎 is the std of the population).
 Under the null hypothesis, we will assume that the mean recived in our experiment is part of the sampling distribution of the population. 
-Therefore, if we standardize the mean that was recieved we will get a Z-score, which can be used to calculate the probability to recieve this mean or a more extreme value. This is the p-value, which we will compare to α  that easdeterminted in the beggining of the experiment.If the p-value if smaller than the alpha we could reject the null hypothesis and say that mean recieved is signicantly different from the mean of the population. 
+Therefore, if we standardize the mean that was recieved we will get a Z-score, which can be used to calculate the probability to recieve this mean or a more extreme value. This is the p-value, which we will compare to α  that easdeterminted in the beggining of the experiment.If the p-value if smaller than the alpha we could reject the null hypothesis and say that mean recieved is signicantly different from the mean of the population.
+$$\frac{x-𝜇}{\frac{𝜎}{\sqrt{n}}}~Z$$
 
 * Use when: Comparing our experiment's mean to the population's one, when the mean and the variance of the population is known.
 
