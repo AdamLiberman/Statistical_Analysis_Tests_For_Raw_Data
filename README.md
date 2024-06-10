@@ -32,7 +32,7 @@ This project was originally implemented as part of the [Python programming cours
 Under the null hypothesis, we will assume that the mean recived in our experiment is part of the sampling distribution of the population. 
 Therefore, if we standardize the mean that was recieved we will get a Z-score, which can be used to calculate the probability to recieve this mean or a more extreme value. This is the p-value, which we will compare to α  that easdeterminted in the beggining of the experiment.If the p-value if smaller than the alpha we could reject the null hypothesis and say that mean recieved is signicantlly different from the mean of the population. 
 
-* Meant for: Comparing our experiment's mean to the population's one, when the mean and the variance of the population is known.
+* Use when: Comparing our experiment's mean to the population's one, when the mean and the variance of the population is known.
 
 * Assumptions:
 1. Population's mean (μ) and std (σ) are known.
@@ -41,8 +41,9 @@ Therefore, if we standardize the mean that was recieved we will get a Z-score, w
 ### 2. One sample t-test:
 
 * Background: Test which is simillar to the Z-test, however it is used when the variance in the population is not known. Instead, we will evaluate the variance in the population using the variance recieved from the results. Since it adds uncertainty, the sampling distribution of the mean will follow a t-distribution with n-1 degrees of freedom.
+  𝑡 =ത𝑋𝑛− 𝜇𝑆𝑛~ 𝑡𝑛−1
 
-* Meant for: Comparing our experiment's mean to the population's one, when it is known.
+* Use when: Comparing our experiment's mean to the population's one, when it is known.
 
 * Assumptions: 
 1. Population's mean (μ) is known.
@@ -50,19 +51,19 @@ Therefore, if we standardize the mean that was recieved we will get a Z-score, w
 
 ### 3. Two-sample paired sample t-test:
 
-* background: test used for comparing 2 samples groups, in which we can match between each sample in group 1 to sample in group 2. in this case, we can calculate the differences between each pair of samples, and preform a one-sample t-test on the difference, which will be zero most of the times (since the null hypothesis is that there is no effect). we will also use the variance of the differences.
+* Background: Test used for comparing 2 samples groups, in which we can match between each sample in group 1 to sample in group 2. In this case, we can calculate the differences between each pair of samples, and preform a one-sample t-test on the differences' mean, which will be zero most of the times (since the null hypothesis is that there is no effect), using also the variance of the differences.
 
-* meant for: comparing between the means of 2 groups, when it is possible to match between each sample in the first group to a sample in the second group, for example- comparing the effect of a drug before and after consumption.
+* Use when: comparing between the means of 2 groups, when it is possible to match between each sample in the first group to a sample in the second group, for example - comparing the effect of a drug before and after consumption.
 
-* assumptions:
+* Assumptions:
 
 ### 4. Two-sample independent t-test:
 
-* background: test used for comparing the means of 2 different samples groups, that cannot be matched. note! In most cases it will be preferable to preform a paired t-test over independent t-test, since this test will have more power (the probability to reject H0 given that H1 is true). in this test we will calculate the difference between the means and will use the weighted average of their variances.
+* Background: test used for comparing the means of 2 different samples groups, that cannot be matched. note! In most cases it will be preferable to preform a paired t-test over independent t-test, since this test will have more power (the probability to reject H0 given that H1 is true). in this test we will calculate the difference between the means and will use the weighted average of their variances.
 
-* meant for: comparing the means of 2 different groups.
+* Use when: comparing the means of 2 different groups.
 
-* assumptions:
+* Assumptions:
 
 ### 5. Pearson correlation:
 
@@ -70,7 +71,7 @@ Therefore, if we standardize the mean that was recieved we will get a Z-score, w
 test to measure the covariance of the 2 contious variables relative to their variances, in order to see if those variables change together in some manner (positive or negative). r is calculated by: 
 if rho is not zero then:
 
-* meant for: test to see if 2 variables change together significatelly.
+* Use when: test to see if 2 variables change together significatelly.
 
 * assumptions:
 
