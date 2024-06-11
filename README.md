@@ -36,7 +36,7 @@ This project was originally implemented as part of the [Python programming cours
 * Background: According to the CLT, the sampling distribution of the mean of sample group of n size, will be distributed normally with a mean that equals to the true mean of the population with a std of 𝜎/sqrt(𝑛) (𝜎 is the std of the population).
 Under the null hypothesis, we will assume that the mean recived in our experiment is part of the sampling distribution of the population. 
 Therefore, if we standardize the mean that was recieved we will get a Z-score, which can be used to calculate the probability to recieve this mean or a more extreme value. This is the p-value, which we will compare to α  that easdeterminted in the beggining of the experiment.If the p-value if smaller than the alpha we could reject the null hypothesis and say that mean recieved is signicantly different from the mean of the population.
-$$\frac{\bar{x}-𝜇}{𝜎/\sqrt{n}}\propto Z$$
+$$\frac{\bar{x}-𝜇}{𝜎/\sqrt{n}}\sim Z$$
 
 ![](standard-normal-distribution-example.png)
 
@@ -49,7 +49,7 @@ $$\frac{\bar{x}-𝜇}{𝜎/\sqrt{n}}\propto Z$$
 ### 2. One sample t-test:
 
 * Background: Test which is simillar to the Z-test, however it is used when the variance in the population is not known. Instead, we will evaluate the variance in the population using the variance recieved from the results. Since it adds uncertainty, the sampling distribution of the mean will follow a t-distribution with n-1 degrees of freedom.
-$$\frac{x-𝜇}{\frac{S}{\sqrt{n}}}~t_(n-1)$$
+$$\frac{\bar{x}-𝜇}{S/\sqrt{n}}\sim t_(n-1)$$
   
 ![](t_distribution_comparisons.png)
 
@@ -63,7 +63,7 @@ $$\frac{x-𝜇}{\frac{S}{\sqrt{n}}}~t_(n-1)$$
 ### 3. Two-sample paired sample t-test:
 
 * Background: Test used for comparing 2 samples groups, in which we can match between each sample in group 1 to sample in group 2. In this case, we can calculate the differences between each pair of samples, and preform a one-sample t-test on the differences' mean, which will be zero most of the times (since the null hypothesis is that there is no effect), using also the variance of the differences. Note that n in this case will be the numbers of pairs.
-$$\frac{d}{\frac{S_d}{\sqrt{n}}}~t_(n-1)$$
+$$\frac{d}{S_d/\sqrt{n}}\sim t_(n-1)$$
 
 * Use when: comparing between the means of 2 groups, when it is possible to match between each sample in the first group to a sample in the second group, for example - comparing the effect of a drug before and after consumption.
 
@@ -74,7 +74,7 @@ $$\frac{d}{\frac{S_d}{\sqrt{n}}}~t_(n-1)$$
 ### 4. Two-sample independent t-test:
 
 * Background: Test used for comparing the means of 2 different sample groups, that cannot be matched. note! In most cases it will be preferable to preform a paired t-test over independent t-test, since this test will have more power (the probability to reject H0 given that H1 is true). In this test we will calculate the difference between the means and will use the weighted average of their variances.
-$$\frac{x_1-x_2}{\sqrt{\frac{S_1^2*(n_1-1)+S_2^2*(n_2-1)}{n_1+n_2-2}}}*\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}~t_(n_1+n_2-2)$$
+$$\frac{x_1-x_2}{\sqrt{\frac{S_1^2*(n_1-1)+S_2^2*(n_2-1)}{n_1+n_2-2}}}*\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}\sim t_(n_1+n_2-2)$$
 
 * Use when: Comparing the means of 2 different unmatching groups.
 
