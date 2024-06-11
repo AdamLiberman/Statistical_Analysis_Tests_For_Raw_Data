@@ -11,7 +11,7 @@ Therefore, there is a need in tools to prove that the research findings have sta
 In order to prove it, the most common method nowdays is to choose an α value, the study's significance level (defined as the probability to reject H0, given H0 is true), which usually chosen to be 5% or lower, depends on the study. The researcher also need to choose the type of tail-test:
 1. One-tail test: Specifying direction of the difference between the means,so that H1 states if the popluation's mean is smaller or bigger than the hypothesized mean. Therefore, the rejection region will be placed entirely in one tail of the sampling distribution, either the upper tail (right-sided test) or the lower tail (left-sided test).
    
-![](Generalized_figure_of_one_sided_test.png)
+![](Generalized_figure_of_one_sided_test.jpg)
 
 3. Two-tail test: Not specifying the direction of difference, so that H1 only states that the population's mean is different than the hypothesized mean. Therefore, the rejection region is divided equally between both tails of the sampling distribution.
    
@@ -88,6 +88,8 @@ $$\frac{\bar{x_1}-\bar{x_2}}{\sqrt{\frac{S_1^2\cdot(n_1-1)+S_2^2\cdot(n_2-1)}{n_
 * Backgorund: Measures the strength and direction of the linear relationship between two variables relatively to their variances. the test checks if those variables change together in a manner that is significant statistically. r is calculated by: 
 $$r=\frac{\sum_{i=1}^{N} (x_i-\bar{x})\cdot (y_i-\bar{y})}{(n-1)\cdot S_x\cdot S_y}$$
 $$\frac{r}{\sqrt{(1-r^2)/(n-2)}}\sim t_{n-2}$$
+
+![](pearson-2-small.png)
 
 * Use when: Testing if 2 variables change together significantly.
 
