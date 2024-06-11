@@ -13,7 +13,7 @@ In order to prove it, the most common method nowdays is to choose an α value, t
    
 ![](Generalized_figure_of_one_sided_test.jpg)
 
-3. Two-tail test: Not specifying the direction of difference, so that H1 only states that the population's mean is different than the hypothesized mean. Therefore, the rejection region is divided equally between both tails of the sampling distribution.
+2. Two-tail test: Not specifying the direction of difference, so that H1 only states that the population's mean is different than the hypothesized mean. Therefore, the rejection region is divided equally between both tails of the sampling distribution.
    
 ![](Generalized_figure_of_two_sided_test.png)
 
