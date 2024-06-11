@@ -86,7 +86,7 @@ $$\frac{\bar{x_1}-\bar{x_2}}{\sqrt{\frac{S_1^2\cdot(n_1-1)+S_2^2\cdot(n_2-1)}{n_
 ### 5. Pearson correlation:
 
 * Backgorund: Measures the strength and direction of the linear relationship between two variables relatively to their variances. the test checks if those variables change together in a manner that is significant statistically. r is calculated by: 
-$$r=\frac{\sum_{i=1}^{N}(x_i-\bar{x})\cdot(y_i-\bar\bar{y}}{(n-1)\cdotS_x\cdotS_y}$$
+$$r=\frac{\sum_{i=1}^{N}(x_i-\bar{x})\cdot(y_i-\bar{y}}{(n-1)\cdotS_x\cdotS_y}$$
 
 * Use when: Testing if 2 variables change together significantly.
 
