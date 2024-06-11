@@ -2,7 +2,7 @@
 
 ## Background
 
-Every academical research has 2 competing hypothesis:
+Most academical researches have 2 competing hypothesis:
 1. Null hypothesis (H0) - the effect being studies does not exist and any experimentally observed effect is due to chance alone.  
 2. Alternative hypothesis (H1) - the effect being studied exhibit a true phenomenon.
    
@@ -86,6 +86,7 @@ $$\frac{\bar{x_1}-\bar{x_2}}{\sqrt{\frac{S_1^2\cdot(n_1-1)+S_2^2\cdot(n_2-1)}{n_
 ### 5. Pearson correlation:
 
 * Backgorund: Measures the strength and direction of the linear relationship between two variables relatively to their variances. the test checks if those variables change together in a manner that is significant statistically. r is calculated by: 
+$$r=\frac{\sum_{i=1}^{N}(x_i-\bar{x})\cdot(y_i-\bar\bar{y}}{(n-1)\cdotS_x\cdotS_y}$$
 
 * Use when: Testing if 2 variables change together significantly.
 
