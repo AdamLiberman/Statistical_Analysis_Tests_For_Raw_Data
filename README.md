@@ -74,7 +74,7 @@ $$\frac{\bar{d}}{S_d/\sqrt{n}}\sim t_{n-1}$$
 ### 4. Two-sample independent t-test:
 
 * Background: Test used for comparing the means of 2 different sample groups, that cannot be matched. note! In most cases it will be preferable to preform a paired t-test over independent t-test, since this test will have more power (the probability to reject H0 given that H1 is true). In this test we will calculate the difference between the means and will use the weighted average of their variances.
-$$\frac{x_1-x_2}{\sqrt{\frac{S_1^2\cdot(n_1-1)+S_2^2\cdot(n_2-1)}{n_1+n_2-2}}\cdot\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}\sim t_{n_1+n_2-2}$$
+$$\frac{\bar{x_1}-\bar{x_2}}{\sqrt{\frac{S_1^2\cdot(n_1-1)+S_2^2\cdot(n_2-1)}{n_1+n_2-2}}\cdot\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}\sim t_{n_1+n_2-2}$$
 
 * Use when: Comparing the means of 2 different unmatching groups.
 
