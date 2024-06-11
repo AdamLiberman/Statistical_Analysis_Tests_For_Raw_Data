@@ -89,7 +89,7 @@ $$\frac{\bar{x_1}-\bar{x_2}}{\sqrt{\frac{S_1^2\cdot(n_1-1)+S_2^2\cdot(n_2-1)}{n_
 $$r=\frac{\sum_{i=1}^{N} (x_i-\bar{x})\cdot (y_i-\bar{y})}{(n-1)\cdot S_x\cdot S_y}$$
 $$\frac{r}{\sqrt{(1-r^2)/(n-2)}}\sim t_{n-2}$$
 
-[](pearson-2-small.png)
+![](pearson-2-small.png)
 
 * Use when: Testing if 2 variables change together significantly.
 
