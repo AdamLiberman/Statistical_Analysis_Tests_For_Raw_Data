@@ -49,7 +49,7 @@ $$\frac{\bar{x}-𝜇}{𝜎/\sqrt{n}}\sim Z$$
 ### 2. One sample t-test:
 
 * Background: Test which is simillar to the Z-test, however it is used when the variance in the population is not known. Instead, we will evaluate the variance in the population using the variance recieved from the results. Since it adds uncertainty, the sampling distribution of the mean will follow a t-distribution with n-1 degrees of freedom.
-$$\frac{\bar{x}-𝜇}{S/\sqrt{n}}\sim t_(n-1)$$
+$$\frac{\bar{x}-𝜇}{S/\sqrt{n}}\sim t_{n-1}$$
   
 ![](t_distribution_comparisons.png)
 
