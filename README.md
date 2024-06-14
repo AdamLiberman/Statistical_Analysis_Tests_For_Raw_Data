@@ -45,6 +45,7 @@ $$\frac{\bar{x}-𝜇}{𝜎/\sqrt{n}}\sim Z$$
 * Assumptions:
    1. Population's mean (μ) and std (σ) are known.
    2. The population from which the sample is drawn follow a normal distribution. Alterntively, the sample size is large enough for the sampling distribution of the sample mean to be approximately normal (n ≥ ~30).
+   3. The observations in the sample must be independent of each other and should not be influenced by or related to other observations.
 
 ### 2. One sample t-test:
 
@@ -56,9 +57,9 @@ $$\frac{\bar{x}-𝜇}{S/\sqrt{n}}\sim t_{n-1}$$
 * Use when: Comparing our experiment's mean to the population's one, when it is known.
 
 * Assumptions: 
-1. Population's mean (μ) is known.
-2. The population from which the sample is drawn follow a normal distribution. Alterntively, the sample size is large enough for the sampling distribution of the sample mean to be approximately normal (n ≥ ~30).
-3. The observations in the sample must be independent of each other and should not be influenced by or related to other observations.
+   1. Population's mean (μ) is known.
+   2. The population from which the sample is drawn follow a normal distribution. Alterntively, the sample size is large enough for the sampling distribution of the sample mean to be approximately normal (n ≥ ~30).
+   3. The observations in the sample must be independent of each other and should not be influenced by or related to other observations.
 
 ### 3. Two-sample paired sample t-test:
 
@@ -73,7 +74,7 @@ $$\frac{\bar{d}}{S_d/\sqrt{n}}\sim t_{n-1}$$
 
 ### 4. Two-sample independent t-test:
 
-* Background: Test used for comparing the means of 2 different sample groups, that cannot be matched. note! In most cases it will be preferable to preform a paired t-test over independent t-test, since this test will have more power (the probability to reject H0 given that H1 is true). In this test we will calculate the difference between the means and will use the weighted average of their variances.
+* Background: Test used for comparing the means of 2 different sample groups, that cannot be matched. note! In most cases it will be better to perform a paired over independent t-test, since this test will have more power (the probability to reject H0 given that H1 is true). In this test we will calculate the difference between the means and will use the weighted average of their variances.
 $$\frac{\bar{x_1}-\bar{x_2}}{\sqrt{\frac{S_1^2\cdot(n_1-1)+S_2^2\cdot(n_2-1)}{n_1+n_2-2}}\cdot\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}\sim t_{n_1+n_2-2}$$
 
 * Use when: Comparing the means of 2 different unmatching groups.
@@ -85,13 +86,14 @@ $$\frac{\bar{x_1}-\bar{x_2}}{\sqrt{\frac{S_1^2\cdot(n_1-1)+S_2^2\cdot(n_2-1)}{n_
 
 ### 5. Pearson correlation:
 
-* Backgorund: Measures the strength and direction of the linear relationship between two variables relatively to their variances. the test checks if those variables change together in a manner that is significant statistically. r is calculated by: 
+* Backgorund: Measures the strength and direction of the linear relationship between two variables relatively to their variances. r is calculated by: 
 $$r=\frac{\sum_{i=1}^{N} (x_i-\bar{x})\cdot (y_i-\bar{y})}{(n-1)\cdot S_x\cdot S_y}$$
+Then, we perform the test:
 $$\frac{r}{\sqrt{(1-r^2)/(n-2)}}\sim t_{n-2}$$
 
 ![](pearson-2-small.png)
 
-* Use when: Testing if 2 variables change together significantly.
+* Use when: Testing if 2 variables change together in a manner that is statistically significant.
 
 * Assumptions: 
    1. Under H0, the covariance of 2 variables is zero.
@@ -108,10 +110,10 @@ $$\frac{r}{\sqrt{(1-r^2)/(n-2)}}\sim t_{n-2}$$
 ## The code
 
 1. The program takes as an input a excel/csv file that contains the results of the experiment. For tests 1-2 the program will expect to recieve one column of results and For the remaining tests the program will expect 2 columns of results. The name of the variable should be specified at the top of each column.
-2. The progtam will ask which the test the user would like to preform.
+2. The program will ask which the test the user would like to preform.
 3. For tests 1-2, the program will ask for the mean of the population. In test 1 it will also require the variance in population.
-4. The progtam will ask for a value for α. For tests 1-4 it will also ask to choose two vs. one tail test.
-5. The program will print as an output the p-value of the test, and wether it is able to reject the null hypothesis. For test 5 it will also specify the value of r.
+4. The program will ask for a value for α. For tests 1-4 it will also ask to choose one or two tail test.
+5. The program will print as an output the p-value of the test, and whether it is able to reject the null hypothesis. For test 5 it will also specify the value of r.
 
 ## Install dependencies:
 
