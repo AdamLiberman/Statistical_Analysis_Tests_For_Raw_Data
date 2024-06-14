@@ -3,13 +3,13 @@
 ## Background
 
 Most academical researches have 2 competing hypothesis:
-1. Null hypothesis (H0) - the effect being studies does not exist and any experimentally observed effect is due to chance alone.  
+1. Null hypothesis (H0) - the effect being studied does not exist and any experimentally observed effect is due to chance alone.  
 2. Alternative hypothesis (H1) - the effect being studied exhibit a true phenomenon.
    
-Therefore, there is a need in tools to prove that the research findings have statistical significance, meaning the probability to get a certain result or more extreme one (a.k.a the p-value) would be very low, under the assumption the null hypothesis is true.
+Therefore, there is a need in tools exhibiting statistical significance of research findings, by calculating if the probability to get a certain result or more extreme one (a.k.a the p-value) would be very low, under the assumption the null hypothesis is true.
 
 In order to prove it, the most common method nowdays is to choose an α value, the study's significance level (defined as the probability to reject H0, given H0 is true), which usually chosen to be 5% or lower, depends on the study. The researcher also need to choose the type of tail-test:
-1. One-tail test: Specifying direction of the difference between the means,so that H1 states if the popluation's mean is smaller or bigger than the hypothesized mean. Therefore, the rejection region will be placed entirely in one tail of the sampling distribution, either the upper tail (right-sided test) or the lower tail (left-sided test).
+1. One-tail test: Specifying direction of the difference between the means,so that H1 states if the popluation's mean is smaller or bigger than the hypothesized mean. Therefore, the rejection region will be placed entirely on one tail of the sampling distribution, either the upper tail (right-sided test) or the lower tail (left-sided test).
    
 ![](Generalized_figure_of_one_sided_test.jpg)
 
