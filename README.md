@@ -79,9 +79,9 @@ $$\frac{\bar{x_1}-\bar{x_2}}{\sqrt{\frac{S_1^2\cdot(n_1-1)+S_2^2\cdot(n_2-1)}{n_
 * Use when: Comparing the means of 2 different unmatching groups.
 
 * Assumptions:
-1. The population from which the sample is drawn follow a normal distribution. Alterntively, the sample size is large enough for the sampling distribution of the sample mean to be approximately normal (n ≥ ~30).
-2. The observations in each group must be independent of each other and should not be influenced by or related to other observations.
-3. The variances in the two groups should be equal.
+   1. The population from which the sample is drawn follow a normal distribution. Alterntively, the sample size is large enough for the sampling distribution of the sample mean to be approximately normal (n ≥ ~30).
+   2. The observations in each group must be independent of each other and should not be influenced by or related to other observations.
+   3. The variances in the two groups should be equal.
 
 ### 5. Pearson correlation:
 
