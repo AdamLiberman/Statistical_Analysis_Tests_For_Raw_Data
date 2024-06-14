@@ -34,8 +34,8 @@ This project was originally implemented as part of the [Python programming cours
 ### 1. Z-test:
 
 * Background: According to the CLT, the sampling distribution of the mean of sample group of n size, will be distributed normally with a mean that equals to the true mean of the population with a std of 𝜎/sqrt(𝑛) (𝜎 is the std of the population).
-Under the null hypothesis, we will assume that the mean recived in our experiment is part of the sampling distribution of the population. 
-Therefore, if we standardize the mean that was recieved we will get a Z-score, which can be used to calculate the probability to recieve this mean or a more extreme value. This is the p-value, which we will compare to α  that easdeterminted in the beggining of the experiment.If the p-value if smaller than the alpha we could reject the null hypothesis and say that mean recieved is signicantly different from the mean of the population.
+Under the null hypothesis, we will assume that the mean received in our experiment is part of the sampling distribution of the population. 
+Therefore, if we standardize the mean that was recieved we will get a Z-score, which can be used to calculate the probability to recieve this mean or a more extreme value. This is the p-value, which we will compare to α that was determinted in the beginning of the experiment. If the p-value if smaller than the alpha we could reject the null hypothesis and say that mean recieved is signicantly different from the mean of the population.
 $$\frac{\bar{x}-𝜇}{𝜎/\sqrt{n}}\sim Z$$
 
 ![](standard-normal-distribution-example.png)
@@ -43,8 +43,8 @@ $$\frac{\bar{x}-𝜇}{𝜎/\sqrt{n}}\sim Z$$
 * Use when: Comparing our experiment's mean to the population's one, when the mean and the variance of the population is known.
 
 * Assumptions:
-1. Population's mean (μ) and std (σ) are known.
-2. The population from which the sample is drawn follow a normal distribution. Alterntively, the sample size is large enough for the sampling distribution of the sample mean to be approximately normal (n ≥ ~30).
+   1. Population's mean (μ) and std (σ) are known.
+   2. The population from which the sample is drawn follow a normal distribution. Alterntively, the sample size is large enough for the sampling distribution of the sample mean to be approximately normal (n ≥ ~30).
 
 ### 2. One sample t-test:
 
@@ -68,8 +68,8 @@ $$\frac{\bar{d}}{S_d/\sqrt{n}}\sim t_{n-1}$$
 * Use when: comparing between the means of 2 groups, when it is possible to match between each sample in the first group to a sample in the second group, for example - comparing the effect of a drug before and after consumption.
 
 * Assumptions:
-1. The population from which the sample is drawn follow a normal distribution. Alterntively, the sample size is large enough for the sampling distribution of the sample mean to be approximately normal (n ≥ ~30).
-2. The observations in the sample must be independent of each other and should not be influenced by or related to other observations.
+   1. The population from which the sample is drawn follow a normal distribution. Alterntively, the sample size is large enough for the sampling distribution of the sample mean to be approximately normal (n ≥ ~30).
+   2. The observations in the sample must be independent of each other and should not be influenced by or related to other observations.
 
 ### 4. Two-sample independent t-test:
 
@@ -94,16 +94,16 @@ $$\frac{r}{\sqrt{(1-r^2)/(n-2)}}\sim t_{n-2}$$
 * Use when: Testing if 2 variables change together significantly.
 
 * Assumptions: 
-1. Under H0, the covariance of 2 variables is zero.
-2. Both variables should be continuous.
-3. Each pair of data points should be independent of each other
-4. Both variables should be approximately normally distributed and their joint distribution should be
-bivariate normal.
-5. The relationship between the two variables should be linear.
-6. Homoscedasticity - The variability of one variable should be similar at all values to the variability of the other
-variable.
-7. No Outliers, since it can disproportionately influence the correlation coefficient, leading to misleading
-results.
+   1. Under H0, the covariance of 2 variables is zero.
+   2. Both variables should be continuous.
+   3. Each pair of data points should be independent of each other
+   4. Both variables should be approximately normally distributed and their joint distribution should be
+   bivariate normal.
+   5. The relationship between the two variables should be linear.
+   6. Homoscedasticity - The variability of one variable should be similar at all values to the variability of the other
+   variable.
+   7. No Outliers, since it can disproportionately influence the correlation coefficient, leading to misleading
+   results.
 
 ## The code
 
