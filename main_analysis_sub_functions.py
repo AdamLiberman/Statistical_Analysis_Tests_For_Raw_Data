@@ -1,10 +1,21 @@
+
 import argparse
 import pandas as pd
-from z_test_function import z_test_main
-from os_t_test_function import os_t_test_main
-from matched_t_test import matched_t_test_main
-from ind_t_test import ind_t_test_main
-from pearson_correlation import r_correlation_main
+from z_test.z_test_main import z_test_main
+from on_t_test.os_t_test_main import os_t_test_main
+from matched_t_test.matched_t_test_main import matched_t_test_main
+from ind_t_test.ind_t_test_main import ind_t_test_main
+from pearson_correlation.pearson_correlation_main import r_correlation_main
+
+
+test_dict = {
+    "Z-test": z_test_main,
+    "One-sample t-test": os_t_test_main,
+    "Two-sample matched t-test": matched_t_test_main,
+    "Two-sample independent t-test": ind_t_test_main,
+    "Pearson Correlation": r_correlation_main
+}
+
 
 def input_file():
     parser = argparse.ArgumentParser()
@@ -15,25 +26,21 @@ def input_file():
     alpha = args.alpha
     return filename, alpha
 
+
 def read_file(filename):
-    df = pd.read_excel(filename, index_col=0)
+    df = pd.read_excel(filename)
     return df
 
-def choose_test():
-    test_list = {"1":"Z-test", "2":"one-sample t-test", "3":"Two-sample matched t-test","4":"Two-sample independent t-test","5":"Pearson Correlation"}
-    test_number = input(f"Choose a test: {test_list}")
-    return test_list, test_number
 
-def execute_test(test_list, test_number, alpha, df):
-    if test_list[test_number] == 1:
-        z_test_main(df, alpha)
-    if test_list[test_number] == 2:
-        os_t_test_main(df, alpha)
-    if test_list[test_number] == 3:
-        matched_t_test_main(df, alpha)
-    if test_list[test_number] == 4:
-        ind_t_test_main(df, alpha)
-    if test_list[test_number] == 5:
-        r_correlation_main(df, alpha)
-    else: 
+def choose_test():
+    test_list = dict(enumerate(test_dict.keys(), start=1))
+    test_number = int(input(f"Choose a test by its index: {test_list}"))
+    return test_list[test_number]
+
+
+def execute_test(test_input, alpha, df):
+    if test_input in test_dict.keys():
+        test_dict[test_input](df, alpha)
+    else:
         print("Please choose a test from the list")
+        exit()
