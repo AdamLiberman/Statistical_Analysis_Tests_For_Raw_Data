@@ -134,6 +134,6 @@ In order to run the program, you should provide the script's name and the result
 ```
 python main_analysis.py FILE --alpha
 ```
-FILE should be an excel file (xlsx.), 
+FILE should be an excel file (xlsx.)
 
-alpha is the wanted confidence level (optional, defult set to 0.05, as it is the most common value)
+alpha is the wanted significance level (optional, defult set to 0.05, as it is the most common value)
