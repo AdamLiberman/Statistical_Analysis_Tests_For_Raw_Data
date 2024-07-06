@@ -19,7 +19,7 @@ test_dict = {
 def input_file():
     parser = argparse.ArgumentParser()
     parser.add_argument('FILE', help= 'Excel file with data')
-    parser.add_argument('alpha', help= 'Choose a confidence level', type=float)
+    parser.add_argument('--alpha', help= 'Choose a confidence level', type=float, default=0.05)
     args = parser.parse_args()
     filename = args.FILE
     alpha = args.alpha

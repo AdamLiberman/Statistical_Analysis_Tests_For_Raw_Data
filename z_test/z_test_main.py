@@ -1,7 +1,6 @@
 from z_test.z_test_sub_function import z_get_input, z_computing, z_output
 
 def z_test_main(df, alpha):
-    print(df.shape)
     if df.shape[1] != 1:
         print("The file's dimensions don't match the selected test")
         exit()
