@@ -136,4 +136,4 @@ python main_analysis.py FILE --alpha
 ```
 FILE should be an excel file (xlsx.), 
 
-alpha is the wanted confidence level (optional, defult set to 0.05, as it is the most common)
+alpha is the wanted confidence level (optional, defult set to 0.05, as it is the most common value)
