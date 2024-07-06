@@ -130,9 +130,8 @@ pytest
 ```
 ## Run the program:
 
-In order to run the program, you should provide the script's name and the results' file, for example:
+In order to run the program, you should provide the script's name and the results' file:
 ```
 python main_analysis.py FILE alpha
 ```
-FILE should be a excel file (xlsx.)
-alpha is the wanted confidence level
+FILE should be an excel file (xlsx.), alpha is the wanted confidence level
