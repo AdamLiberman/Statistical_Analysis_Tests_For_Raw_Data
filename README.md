@@ -132,5 +132,7 @@ pytest
 
 In order to run the program, you should provide the script's name and the results' file, for example:
 ```
-python statistical_analysis.py experimental_data.xlsx
+python main_analysis.py FILE alpha
 ```
+FILE should be a excel file (xlsx.)
+alpha is the wanted confidence level
