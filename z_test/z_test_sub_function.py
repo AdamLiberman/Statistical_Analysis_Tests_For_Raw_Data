@@ -1,4 +1,3 @@
-import pandas as pd
 import numpy as np
 import scipy.stats as stats
 
@@ -18,23 +17,24 @@ z_tail_dict = {"one-tail": z_one_tail, "two-tail": z_two_tail}
 
 def z_get_input():
     try:
+        print("Choose alternative hypothesis")
         tail_list = dict(enumerate(z_tail_dict.keys(), start=1))    
         tail_number = int(input(f"Choose a test by its index: {tail_list}"))
         pop_mean = float(input("What is the population mean? "))
         pop_std = float(input("What is the population std? "))
-    except TypeError:
+    except ValueError:
         print("Please enter a number")
         exit()
     return tail_list[tail_number],pop_mean,pop_std
 
 def z_computing(df, pop_mean, pop_std):
-    sam_mean = np.mean(df)
+    sam_mean = np.mean(df.iloc[:, 0])
     z_score = (((sam_mean-pop_mean)*np.sqrt(len(df)))/pop_std)
     if pop_mean > sam_mean:
         p_value = stats.norm.cdf(z_score)
     if pop_mean <= sam_mean:
         p_value = 1-stats.norm.cdf(z_score)
-    return sam_mean,z_score, p_value
+    return p_value, z_score, sam_mean
 
 def z_output(alpha, p_value, tail_input, sam_mean, pop_mean, z_score):
     print(f"Sample mean: {sam_mean}")

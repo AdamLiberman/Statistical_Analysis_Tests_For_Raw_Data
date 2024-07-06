@@ -2,7 +2,7 @@
 import argparse
 import pandas as pd
 from z_test.z_test_main import z_test_main
-from on_t_test.os_t_test_main import os_t_test_main
+from os_t_test.os_t_test_main import os_t_test_main
 from matched_t_test.matched_t_test_main import matched_t_test_main
 from ind_t_test.ind_t_test_main import ind_t_test_main
 from pearson_correlation.pearson_correlation_main import r_correlation_main
@@ -16,7 +16,6 @@ test_dict = {
     "Pearson Correlation": r_correlation_main
 }
 
-
 def input_file():
     parser = argparse.ArgumentParser()
     parser.add_argument('FILE', help= 'Excel file with data')
@@ -28,13 +27,17 @@ def input_file():
 
 
 def read_file(filename):
-    df = pd.read_excel(filename)
+    df = pd.read_excel(filename, header=None)
     return df
 
 
 def choose_test():
-    test_list = dict(enumerate(test_dict.keys(), start=1))
-    test_number = int(input(f"Choose a test by its index: {test_list}"))
+    try:
+        test_list = dict(enumerate(test_dict.keys(), start=1))
+        test_number = int(input(f"Choose a test by its index: {test_list} "))
+    except ValueError:
+        print("Please select a number")
+        exit()
     return test_list[test_number]
 
 

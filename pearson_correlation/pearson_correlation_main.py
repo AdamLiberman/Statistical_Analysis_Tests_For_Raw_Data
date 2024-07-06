@@ -1,7 +1,7 @@
-from pearson_correlation_sub_function import r_get_input, r_computation, r_output
+from pearson_correlation.pearson_correlation_sub_function import r_get_input, r_computation, r_output
 
 def r_correlation_main(df, alpha):
-    if df.size[1] != 2:
+    if df.shape[1] != 2:
         print("The file's dimensions don't match the selected test")
         exit()
     else:

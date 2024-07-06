@@ -15,16 +15,16 @@ def os_t_get_input():
         tail_list = dict(enumerate(t_tail_dict.keys(), start=1))    
         tail_number = int(input(f"Choose a test type by its index: {tail_list}"))
         pop_mean = float(input("What is the population's mean? "))
-    except TypeError:
+    except ValueError:
         print("Please enter a number")
         exit()
     return tail_list[tail_number], pop_mean
 
 def os_t_computation(df, pop_mean, t_tail, alpha):
     test_result = stats.ttest_1samp(df, pop_mean, alternative=t_tail)
-    t_statistic = test_result.statistic
-    p_value = test_result.pvalue
-    sam_mean = np.mean(df)
+    t_statistic = test_result.statistic[0]
+    p_value = test_result.pvalue[0]
+    sam_mean = np.mean(df.iloc[:, 0])
     confid_level = 1-alpha
     ci = test_result.confidence_interval(confidence_level=confid_level)
     return t_statistic, p_value, sam_mean, ci

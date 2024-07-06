@@ -1,8 +1,8 @@
-from ind_t_test_sub_function import ind_t_get_input, ind_t_computation
+from ind_t_test.ind_t_test_sub_function import ind_t_get_input, ind_t_computation
 from matched_t_test.matched_t_test_sub_function import matched_t_output
 
 def ind_t_test_main(df, alpha):
-    if df.size[1] != 2:
+    if df.shape[1] != 2:
         print("The file's dimensions don't match the selected test")
         exit()
     else:

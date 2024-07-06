@@ -112,8 +112,9 @@ $$\frac{r}{\sqrt{(1-r^2)/(n-2)}}\sim t_{n-2}$$
 1. The program takes as an input a excel/csv file that contains the results of the experiment. For tests 1-2 the program will expect to recieve one column of results and For the remaining tests the program will expect 2 columns of results. The name of the variable should be specified at the top of each column.
 2. The program will ask which the test the user would like to preform.
 3. For tests 1-2, the program will ask for the mean of the population. In test 1 it will also require the variance in population.
-4. The program will ask for a value for α. For tests 1-4 it will also ask to choose one or two tail test.
-5. The program will print as an output the p-value of the test, and whether it is able to reject the null hypothesis. For test 5 it will also specify the value of r.
+4. The program will ask for a value for α. Afterwards, it will also ask to choose one or two tail test.
+5. The program will print as an output the mean or means of the sample groups, the statistic, the p-value of the test, and whether it is able to reject the null hypothesis. For test 5 it will also specify the value of r.
+6. For tests 2-4, the program will also print the confidence interval (CI), in which the real mean of the population will be for 95% (for 95% confidence level) of the calculated confidence intervals.
 
 ## Install dependencies:
 
