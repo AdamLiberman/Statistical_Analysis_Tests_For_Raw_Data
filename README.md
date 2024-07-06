@@ -91,7 +91,7 @@ $$r=\frac{\sum_{i=1}^{N} (x_i-\bar{x})\cdot (y_i-\bar{y})}{(n-1)\cdot S_x\cdot S
 Then, we perform the test:
 $$\frac{r}{\sqrt{(1-r^2)/(n-2)}}\sim t_{n-2}$$
 
-![](pearson-2-small.png)
+![](pictures/pearson-2-small.png)
 
 * Use when: Testing if 2 variables change together in a manner that is statistically significant.
 
