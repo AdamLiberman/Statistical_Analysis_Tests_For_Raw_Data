@@ -11,11 +11,11 @@ Therefore, there is a need in tools exhibiting statistical significance of resea
 In order to prove it, the most common method nowdays is to choose an α value, the study's significance level (defined as the probability to reject H0, given H0 is true), which usually chosen to be 5% or lower, depends on the study. The researcher also need to choose the type of tail-test:
 1. One-tail test: Specifying direction of the difference between the means,so that H1 states if the popluation's mean is smaller or bigger than the hypothesized mean. Therefore, the rejection region will be placed entirely on one tail of the sampling distribution, either the upper tail (right-sided test) or the lower tail (left-sided test).
    
-![](Generalized_figure_of_one_sided_test.jpg)
+![](pictures/Generalized_figure_of_one_sided_test.jpg)
 
 2. Two-tail test: Not specifying the direction of difference, so that H1 only states that the population's mean is different than the hypothesized mean. Therefore, the rejection region is divided equally between both tails of the sampling distribution.
    
-![](Generalized_figure_of_two_sided_test.png)
+![](pictures/Generalized_figure_of_two_sided_test.png)
 
 Afterwards, the p-value will be calculated from the data using different tests, intended for different sets of data. The p-value will be compared to α, and the result will be declared as statistically significant, by the standards of the study, if p-value ≤ α.
 
@@ -38,7 +38,7 @@ Under the null hypothesis, we will assume that the mean received in our experime
 Therefore, if we standardize the mean that was recieved we will get a Z-score, which can be used to calculate the probability to recieve this mean or a more extreme value. This is the p-value, which we will compare to α that was determinted in the beginning of the experiment. If the p-value if smaller than the alpha we could reject the null hypothesis and say that mean recieved is signicantly different from the mean of the population.
 $$\frac{\bar{x}-𝜇}{𝜎/\sqrt{n}}\sim Z$$
 
-![](standard-normal-distribution-example.png)
+![](pictures/standard-normal-distribution-example.png)
 
 * Use when: Comparing our experiment's mean to the population's one, when the mean and the variance of the population is known.
 
@@ -52,7 +52,7 @@ $$\frac{\bar{x}-𝜇}{𝜎/\sqrt{n}}\sim Z$$
 * Background: Test which is simillar to the Z-test, however it is used when the variance in the population is not known. Instead, we will evaluate the variance in the population using the variance recieved from the results. Since it adds uncertainty, the sampling distribution of the mean will follow a t-distribution with n-1 degrees of freedom.
 $$\frac{\bar{x}-𝜇}{S/\sqrt{n}}\sim t_{n-1}$$
   
-![](t_distribution_comparisons.png)
+![](pictures/t_distribution_comparisons.png)
 
 * Use when: Comparing our experiment's mean to the population's one, when it is known.
 
