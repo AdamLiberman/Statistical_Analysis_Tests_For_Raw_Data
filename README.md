@@ -118,6 +118,8 @@ $$\frac{r}{\sqrt{(1-r^2)/(n-2)}}\sim t_{n-2}$$
 
 ## Install dependencies:
 
+In order to install the depedencies, the program requires Python 3.9 or newer.
+
 Use the following command:
 ```
 pip install -r requirements.txt
