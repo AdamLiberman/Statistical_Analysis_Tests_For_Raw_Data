@@ -30,11 +30,13 @@ def os_t_computation(df, pop_mean, t_tail, alpha):
     return t_statistic, p_value, sam_mean, ci
 
 def os_t_output(alpha, p_value, sam_mean, pop_mean, t_statistic, ci):
-    print(f"Sample mean: {sam_mean}")
-    print(f"population mean: {pop_mean}")
-    print(f"t_statistic : {t_statistic}") 
-    print(f"p-value : {p_value}")
-    print(f"Confidence interval: {ci}")
+    print("--------------------------------------------------")
+    print("Results:")
+    print(f"Sample mean: {sam_mean:.4f}")
+    print(f"population mean: {pop_mean:.4f}")
+    print(f"t_statistic : {t_statistic:.4f}") 
+    print(f"p-value : {p_value:.4f}")
+    print(f"Confidence interval: ({ci.low[0]:.4f},{ci.high[0]:.4f})")
     z_one_tail(alpha, p_value)
 
   

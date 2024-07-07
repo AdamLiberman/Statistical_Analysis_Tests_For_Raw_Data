@@ -37,10 +37,12 @@ def z_computing(df, pop_mean, pop_std):
     return p_value, z_score, sam_mean
 
 def z_output(alpha, p_value, tail_input, sam_mean, pop_mean, z_score):
-    print(f"Sample mean: {sam_mean}")
-    print(f"population mean: {pop_mean}")
-    print(f"Z-Score : {z_score}") 
-    print(f"p-value : {p_value}")
+    print("--------------------------------------------------")
+    print("Results:")
+    print(f"Sample mean: {sam_mean:.4f}")
+    print(f"population mean: {pop_mean:.4f}")
+    print(f"Z-Score : {z_score:.4f}") 
+    print(f"p-value : {p_value:.4f}")
     if tail_input in z_tail_dict.keys():
         z_tail_dict[tail_input](alpha, p_value)
     else:

@@ -28,8 +28,10 @@ def r_computation(df, test_type):
     return r,p_value,sam1_mean,sam2_mean
 
 def r_output(alpha, r, p_value, sam1_mean, sam2_mean):
-    print(f"Group 1 mean: {sam1_mean}")
-    print(f"Group 2 mean: {sam2_mean}")
-    print(f'Pearsons correlation: {r}')
-    print(f'P-value: {p_value}')
+    print("--------------------------------------------------")
+    print("Results:")
+    print(f"Group 1 mean: {sam1_mean:.4f}")
+    print(f"Group 2 mean: {sam2_mean:.4f}")
+    print(f'Pearsons correlation: {r:.4f}')
+    print(f'P-value: {p_value:.4f}')
     z_one_tail(alpha, p_value)

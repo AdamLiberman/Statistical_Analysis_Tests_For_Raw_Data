@@ -25,11 +25,13 @@ def matched_t_computation(df, t_tail, alpha):
     return t_statistic,p_value, sam1_mean, sam2_mean, ci
 
 def matched_t_output(alpha, t_statistic, p_value, sam1_mean, sam2_mean, ci):
-    print(f"Group 1 mean: {sam1_mean}")
-    print(f"Group 2 mean: {sam2_mean}")
-    print(f"t-statistic: {t_statistic}")
-    print(f"p-value: {p_value}")
-    print(f"Confidence interval: {ci}")
+    print("--------------------------------------------------")
+    print("Results:")
+    print(f"Group 1 mean: {sam1_mean:.4f}")
+    print(f"Group 2 mean: {sam2_mean:.4f}")
+    print(f"t-statistic: {t_statistic:.4f}")
+    print(f"p-value: {p_value:.4f}")
+    print(f"Confidence interval: ({ci.low:.4f},{ci.high:.4f})")
     z_one_tail(alpha, p_value)
 
 

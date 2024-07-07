@@ -14,7 +14,7 @@ def ind_t_get_input():
         elif equal_variances == "n":
             equal_variances = False
         else:
-            print("Please write only y/n")
+            print("Please write only y/n ")
             exit()
     except ValueError:
         print("Please enter a number")
